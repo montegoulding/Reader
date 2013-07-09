@@ -316,7 +316,9 @@
 
 	[encoder encodeObject:_fileName forKey:@"FileName"];
 
-	[encoder encodeObject:_fileDate forKey:@"FileDate"];
+	[encoder encodeObject:_title forKey:@"Title"];
+
+    [encoder encodeObject:_fileDate forKey:@"FileDate"];
 
 	[encoder encodeObject:_pageCount forKey:@"PageCount"];
 
@@ -337,7 +339,9 @@
 
 		_fileName = [decoder decodeObjectForKey:@"FileName"];
 
-		_fileDate = [decoder decodeObjectForKey:@"FileDate"];
+		_title = [decoder decodeObjectForKey:@"Title"];
+
+        _fileDate = [decoder decodeObjectForKey:@"FileDate"];
 
 		_pageCount = [decoder decodeObjectForKey:@"PageCount"];
 

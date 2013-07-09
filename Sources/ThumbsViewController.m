@@ -95,8 +95,8 @@
 	CGRect viewRect = self.view.bounds; // View controller's view bounds
 
 	NSString *toolbarTitle = document.title;
-
-	CGRect toolbarRect = viewRect; toolbarRect.size.height = TOOLBAR_HEIGHT;
+    
+    CGRect toolbarRect = viewRect; toolbarRect.size.height = TOOLBAR_HEIGHT;
 
 	mainToolbar = [[ThumbsMainToolbar alloc] initWithFrame:toolbarRect title:toolbarTitle]; // At top
 
