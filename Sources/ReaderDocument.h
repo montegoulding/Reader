@@ -35,6 +35,7 @@
 @property (nonatomic, strong, readwrite) NSNumber *pageNumber;
 @property (nonatomic, strong, readonly) NSMutableIndexSet *bookmarks;
 @property (nonatomic, strong, readonly) NSString *fileName;
+@property (nonatomic, strong, readwrite) NSString *title;
 @property (nonatomic, strong, readonly) NSString *password;
 @property (nonatomic, strong, readonly) NSURL *fileURL;
 

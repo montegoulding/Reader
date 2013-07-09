@@ -44,6 +44,8 @@
 	NSMutableIndexSet *_bookmarks;
 
 	NSString *_fileName;
+    
+    NSString *_title;
 
 	NSString *_password;
 
@@ -60,6 +62,7 @@
 @synthesize bookmarks = _bookmarks;
 @synthesize lastOpen = _lastOpen;
 @synthesize password = _password;
+@synthesize title = _title;
 @dynamic fileName, fileURL;
 
 #pragma mark ReaderDocument class methods
@@ -211,6 +214,8 @@
 			_pageNumber = [NSNumber numberWithInteger:1]; // Start on page 1
 
 			_fileName = [ReaderDocument relativeFilePath:fullFilePath]; // File name
+            
+            _title = [[_fileName lastPathComponent] stringByDeletingPathExtension]; // Default title
 
 			CFURLRef docURLRef = (__bridge CFURLRef)[self fileURL]; // CFURLRef from NSURL
 
